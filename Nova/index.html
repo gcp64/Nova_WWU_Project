@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نوفا | المجتمع الأمثل على ديسكورد</title>
+    <meta name="description" content="انضم إلى نوفا، مجتمع ديسكورد احترافي ونشط للغاية للألعاب، الدردشة، والدعم.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="logo.jpg">
+    <!-- Preload Transition Asset -->
+    <link rel="preload" as="image" href="wuwa-glitch-logo.jpg">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <i class="fas fa-snowflake snowflake-loader"></i>
+    </div>
+    <div class="custom-cursor"></div>
+
+    <div class="custom-cursor-dot"></div>
+    <canvas id="particle-canvas"></canvas>
+    <div class="scroll-progress"></div>
+
+    <!-- Tacet Transition Overlay -->
+    <div id="tacet-overlay">
+        <div class="tacet-scanlines"></div>
+        <div class="tacet-shockwave"></div>
+        <div class="tacet-content">
+            <img src="wuwa-glitch-logo.jpg" alt="Wuthering Waves" class="tacet-waves-logo-img">
+        </div>
+    </div>
+
+    <div class="bg-mesh"></div>
+
+    <nav>
+        <div class="logo-container">
+            <div class="logo-circle">
+                <img src="logo.jpg" alt="شعار نوفا">
+            </div>
+            <span style="font-family: 'Outfit'; font-weight: 800; font-size: 1.2rem; letter-spacing: 2px;">NOVA</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home">الهوم</a>
+            <a href="#about">منو احنا؟</a>
+            <a href="#features">شنو عدنا؟</a>
+            <a href="#rules">شروطنا</a>
+            <a href="wuthering-waves.html">وذرنق ويفز</a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <a href="https://discord.gg/rnw4DZ4gu6" class="btn btn-primary">تعال ويانا</a>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-pill">Community of Excellence</div>
+                <h1>NOVA</h1>
+                <p>أقوى لمه ومجتمع على الديسكورد</p>
+                <a href="#about" class="btn btn-primary" style="padding: 15px 40px; font-size: 1.1rem;">استكشف
+                    المجتمع</a>
+            </div>
+            <!-- Ice Shard Divider -->
+            <div class="section-divider divider-bottom">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="divider-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">شنو هي نوفا؟</h2>
+                <p style="color: var(--clr-text-muted); font-size: 1.1rem;">
+                    نوفا مو مجرد سيرفر عادي، هي مكان يجمع الكل بمكان واحد. هدفنا نسوي أقوى مجتمع للألعاب والدردشة
+                    والونسه. مكاننا محترم ويليق بيكم، والفعاليات والجوائز ما تخلص يمنا، والدعم موجود بأي وقت تحتاجونا.
+                </p>
+            </div>
+
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features">
+            <h2 style="text-align: center; margin-bottom: 50px;">ليش تنضم لنا؟</h2>
+            <div class="features-grid">
+                <div class="feature-card glass">
+                    <i class="fas fa-users"></i>
+                    <h3>ناس طيبة</h3>
+                    <p style="color: var(--clr-text-muted);">أعضاء متفاعلون وونسة ما تخلص طول اليوم.</p>
+                </div>
+                <div class="feature-card glass">
+                    <i class="fas fa-sitemap"></i>
+                    <h3>ترتيب عالي</h3>
+                    <p style="color: var(--clr-text-muted);">قنواتنا مرتبة وسهلة، حتى ما تضيع وتوصل للي تريده بسرعة.</p>
+                </div>
+                <div class="feature-card glass">
+                    <i class="fas fa-shield-halved"></i>
+                    <h3>إدارة حكيمة</h3>
+                    <p style="color: var(--clr-text-muted);">فريقنا موجود حتى يضمن راحتكم ويحافظ على احترام الكل.</p>
+                </div>
+                <div class="feature-card glass">
+                    <i class="fas fa-trophy"></i>
+                    <h3>هدايا ونسة</h3>
+                    <p style="color: var(--clr-text-muted);">مسابقات، جوائز، وليالي مجتمعية خرافية.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rules Section -->
+        <section id="rules">
+            <h2 style="text-align: center; margin-bottom: 50px;">شروط السيرفر</h2>
+            <div class="rules-list glass">
+                <div class="rule-item">
+                    <span class="rule-num">01</span>
+                    <div>
+                        <p style="color: var(--clr-text-main);">عدم السب والشتم في الشات العام والرومات الصوتية.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-num">02</span>
+                    <div>
+                        <p style="color: var(--clr-text-main);">عدم تكرار الكتابة او الملصقات (سبام).</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-num">03</span>
+                    <div>
+                        <p style="color: var(--clr-text-main);">عدم التجاوز على الاعضاء وازعاجهم في الشات أو الرومات
+                            العامة.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-num">04</span>
+                    <div>
+                        <p style="color: var(--clr-text-main);">عدم طلب الرتب نهائيا.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-num">05</span>
+                    <div>
+                        <p style="color: var(--clr-text-main);">عدم نشر اي رابط سيرفر أو موقع تجاري في (الخاص او العام)
+                            الا مع اتفاق الادارة في التكت.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-num">06</span>
+                    <div>
+                        <p style="color: var(--clr-text-main);">عدم الخوض في نقاشات سياسية و دينية و طائفية.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-num">07</span>
+                    <div>
+                        <p style="color: var(--clr-text-main);">عدم الدخول بأسماء او صور مخلة او منافية للآداب العامة
+                            والشريعة الإسلامية.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-num">08</span>
+                    <div>
+                        <p style="color: var(--clr-text-main);">عدم التوسط لأي شخص متبند او ماخذ تايم اوت في السيرفر.
+                        </p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-num">09</span>
+                    <div>
+                        <p style="color: var(--clr-text-main);">عدم تشغيل اصوات غير لائقة في الرومات العامة وتخريبها.
+                        </p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-num">10</span>
+                    <div>
+                        <p style="color: var(--clr-text-main);">عدم فتح بث على اشياء غير لائقة او منافية للأخلاق والآداب
+                            العامة.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-num">11</span>
+                    <div>
+                        <p style="color: var(--clr-text-main);">عدم التدخل في أمور الادارة نهائياً.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-num">12</span>
+                    <div>
+                        <p style="color: var(--clr-text-main);">عدم انتحال اي شخصية في السيرفر ان كان ادمن أو عضو.</p>
+                    </div>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-num">13</span>
+                    <div>
+                        <p style="color: var(--clr-text-main);">عدم فتح تكت في الدعم الفني لأشياء غير ضرورية فقط ان كان
+                            هنالك تحتاج المساعدة او تقدم طلب مساعدة الى السيرفر.</p>
+                    </div>
+                </div>
+                <div class="rule-item" style="border-bottom: none;">
+                    <span class="rule-num">14</span>
+                    <div>
+                        <p style="color: var(--clr-text-main);">ممنوع على اي ادمن او اداري او اي رتبة معينة بالسيرفر سحب
+                            اي عضو من اعضاء السيرفر حرصا على راحتهم فقط بين الاداريين والاصدقاء المقربين.</p>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 20px; color: var(--clr-text-muted); font-size: 0.9rem;">* القوانين
+                قابلة للتعديل في أي وقت.</p>
+        </section>
+
+        <!-- Join Section -->
+        <section id="join" class="join-section">
+            <div class="container">
+                <h2>مستعد تنورنا؟</h2>
+                <a href="https://discord.gg/rnw4DZ4gu6" class="btn btn-primary"
+                    style="font-size: 1.5rem; padding: 20px 50px;">ادخل لسيرفر نوفا</a>
+                <p style="margin-top: 20px; color: var(--clr-text-muted);">تعال وجرب أحلى لمه وناس طيبة.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 40px 5%; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+        <p style="color: var(--clr-text-muted); font-size: 0.9rem;">&copy; 2026 مجتمع نوفا. كل الحقوق محفوظة.</p>
+    </footer>
+
+    <a href="https://discord.gg/rnw4DZ4gu6" class="floating-discord" title="انضم لنا على ديسكورد">
+        <i class="fab fa-discord"></i>
+    </a>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

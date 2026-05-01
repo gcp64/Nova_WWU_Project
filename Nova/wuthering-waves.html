@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wuthering Waves – NOVA | مجتمع وذرنق الرسمي</title>
+    <meta name="description"
+        content="هذا هو مجتمع وذرنق ويفز الرسمي التابع لنوفا. أخبار، تسريبات، ونقاشات بمكان واحد مرتب.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="logo.jpg">
+    <!-- Preload Transition Asset -->
+    <link rel="preload" as="image" href="wuwa-glitch-logo.jpg">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .wuwa-hero {
+            padding: 150px 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wuwa-visual-wrapper {
+            width: 100%;
+            max-width: 1000px;
+            margin-bottom: 40px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 2px solid rgba(124, 77, 255, 0.3);
+            box-shadow: 0 0 40px rgba(124, 77, 255, 0.2);
+            animation: floating 6s ease-in-out infinite;
+            position: relative;
+        }
+
+        .wuwa-visual-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(5, 5, 8, 0.4) 0%, transparent 40%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .wuwa-visual-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.8s var(--transition);
+        }
+
+        .wuwa-visual-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        .platform-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .platform-card {
+            padding: 50px 30px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .platform-card:hover {
+            border-color: var(--clr-secondary);
+            transform: translateY(-10px);
+            box-shadow: var(--glow-secondary);
+        }
+
+        .platform-card i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: var(--grad-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .exclusivity-box {
+            background: rgba(124, 77, 255, 0.05);
+            border: 1px solid rgba(124, 77, 255, 0.2);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .exclusivity-box h2 {
+            color: var(--clr-primary);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <i class="fas fa-snowflake snowflake-loader"></i>
+    </div>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+    <canvas id="particle-canvas"></canvas>
+    <div class="scroll-progress"></div>
+
+    <!-- Tacet Transition Overlay -->
+    <div id="tacet-overlay">
+        <div class="tacet-scanlines"></div>
+        <div class="tacet-shockwave"></div>
+        <div class="tacet-content">
+            <img src="wuwa-glitch-logo.jpg" alt="Wuthering Waves" class="tacet-waves-logo-img">
+        </div>
+    </div>
+    <div class="bg-mesh"></div>
+
+    <nav>
+        <div class="logo-container">
+            <div class="logo-circle" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                <img src="logo.jpg" alt="شعار نوفا">
+            </div>
+            <span
+                style="font-family: 'Outfit'; font-weight: 800; font-size: 1.2rem; letter-spacing: 2px; cursor: pointer;"
+                onclick="window.location.href='index.html'">NOVA</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="#about">منو احنا؟</a>
+            <a href="#platforms">المنصات</a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <a href="https://discord.gg/rnw4DZ4gu6" class="btn btn-primary">ادخل للسيرفر</a>
+    </nav>
+
+    <main>
+        <!-- Cinematic Hero Section -->
+        <section class="wuwa-hero">
+            <div class="wuwa-visual-wrapper tilt-card-container"
+                style="border: none; background: transparent; box-shadow: none;">
+                <div class="tilt-card glass"
+                    style="border: 1px solid var(--clr-primary); overflow: hidden; position: relative; border-radius: var(--radius-lg); box-shadow: 0 20px 80px rgba(0,0,0,0.5);">
+                    <!-- NEW VISUAL -->
+                    <img src="wuwa-visual-new.jpg" alt="Wuthering Waves NOVA Visual"
+                        style="width: 100%; height: auto; display: block; filter: contrast(1.1) saturate(1.1);">
+
+                    <!-- Premium Overlays -->
+                    <div class="shine-effect"></div>
+                    <div class="sound-wave-overlay"
+                        style="position: absolute; bottom: 0; left: 0; width: 100%; height: 150px; background: linear-gradient(0deg, var(--wuwa-tacet) 0%, transparent 100%); opacity: 0.8; mix-blend-mode: multiply;">
+                    </div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-pill" style="border-color: var(--clr-primary); color: var(--clr-primary);">RESONATORS
+                    ASSEMBLE</div>
+                <h1 style="font-size: clamp(3rem, 7vw, 6rem);" class="tacet-glitch" data-text="Wuthering Waves">
+                    Wuthering Waves</h1>
+                <p style="font-size: 1.4rem; color: var(--clr-text-muted);">المجتمع الرسمي للنخبة. أخبار، تسريبات،
+                    وأكواد حصرية.</p>
+            </div>
+
+            <!-- Ice Shard Divider -->
+            <div class="section-divider divider-bottom">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="divider-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Status & Codes Section -->
+        <section id="codes" style="position: relative; z-index: 5;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 class="frosted-text">حالة السيرفر والأكواد</h2>
+                <div
+                    style="height: 4px; width: 100px; background: var(--grad-primary); margin: 20px auto; border-radius: 2px;">
+                </div>
+            </div>
+
+            <div class="codes-container" style="max-width: 900px; margin: 0 auto;">
+                <!-- Coming Soon Board -->
+                <div class="code-card glass vault-locked"
+                    style="display: flex; flex-direction: column; align-items: center; padding: 60px; text-align: center; border: 1px solid rgba(0, 240, 255, 0.3); box-shadow: var(--glow-primary);">
+
+                    <div style="position: relative; margin-bottom: 30px;">
+                        <div class="vault-ring-outer"></div>
+                        <div class="vault-ring-inner"></div>
+                        <i class="fas fa-lock" style="font-size: 4rem; color: var(--clr-text-muted); opacity: 0.5;"></i>
+                        <i class="fas fa-snowflake"
+                            style="font-size: 2rem; color: var(--clr-primary); position: absolute; top: -10px; right: -10px; animation: spin 4s linear infinite;"></i>
+                    </div>
+
+                    <h3 style="font-size: 2.5rem; margin-bottom: 15px; color: var(--clr-text-main);">خزنة الأكواد مغلقة
+                    </h3>
+                    <p style="font-size: 1.2rem; color: var(--clr-text-muted); max-width: 600px;">
+                        فرق البحث في نوفا تعمل حالياً على تأمين حزمة جديدة من الأكواد.
+                        <br>تابع القنوات الرسمية لتكون أول من يحصل عليها.
+                    </p>
+
+                    <div style="margin-top: 40px; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                        <a href="https://discord.gg/rnw4DZ4gu6" class="btn btn-primary" style="min-width: 200px;">
+                            <i class="fab fa-discord"></i> تفعيل التنبيهات
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Echo Terminal -->
+        <section id="terminal-section">
+            <h2 style="text-align: center; margin-bottom: 30px;" class="frosted-text">سجلات النظام - ECHO LOGS</h2>
+
+            <div class="echo-terminal glass">
+                <div class="terminal-header">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <span>STATUS: ONLINE</span>
+                        <div class="echo-frequency">
+                            <div class="freq-bar"></div>
+                            <div class="freq-bar"></div>
+                            <div class="freq-bar"></div>
+                            <div class="freq-bar"></div>
+                            <div class="freq-bar"></div>
+                        </div>
+                    </div>
+                    <span>NET_ID: NOVA_NEXUS</span>
+                </div>
+                <div class="terminal-content" id="terminal-logs">
+                    <!-- Logs will be injected here via JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 40px 5%; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+        <p style="color: var(--clr-text-muted); font-size: 0.9rem;">&copy; 2026 مجتمع نوفا. كل الحقوق محفوظة.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

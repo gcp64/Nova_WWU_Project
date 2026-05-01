@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wuthering Waves x NOVA Community | Ultimate</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-text">INITIALIZING NOVA OS</div>
+        <div class="feature-bar">
+            <div class="feature-progress"></div>
+        </div>
+        <div class="terminal-log" id="term-log">Waiting for input...</div>
+    </div>
+
+    <!-- Background FX -->
+    <div class="noise-overlay"></div>
+    <div id="cursor"></div>
+    <canvas id="fx-canvas"></canvas>
+
+    <!-- Smooth Scroll Wrapper -->
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- Nav -->
+            <nav>
+                <a href="#" class="nav-brand magnetic-btn">NOVA <span>COMMUNITY</span></a>
+                <a href="#discord" class="magnetic-btn"
+                    style="color:#fff; text-decoration:none; font-weight:bold; padding: 15px 35px; border: 2px solid var(--game-primary); border-radius: 40px; box-shadow:0 0 20px var(--game-primary);">
+                    JOIN DISCORD
+                </a>
+            </nav>
+
+            <!-- Hero -->
+            <section class="hero">
+                <div class="hero-bg"></div>
+                <div class="vignette"></div>
+                <!-- Sound Wave / Glitch Decorative Elements -->
+                <div
+                    style="position:absolute; top:20%; left:10%; width:2px; height:100px; background:var(--game-cyan); box-shadow:0 0 10px var(--game-cyan); opacity:0.5;">
+                </div>
+                <div
+                    style="position:absolute; bottom:30%; right:15%; width:100px; height:2px; background:var(--game-purple); box-shadow:0 0 10px var(--game-purple); opacity:0.5;">
+                </div>
+
+                <div class="hero-content">
+                    <h1 class="hero-title glitch" data-text="WUTHERING WAVES">WUTHERING<br>WAVES</h1>
+                    <h2 class="arabic-subtitle">فجر جديد</h2>
+                    <a href="#" class="hero-btn magnetic-btn">SYSTEM ONLINE</a>
+                </div>
+                <!-- Jagged Divider -->
+                <div class="section-divider"></div>
+            </section>
+
+            <!-- TRANSMISSION TICKER -->
+            <div class="ticker-wrap">
+                <div class="ticker">
+                    <div class="ticker-item">:: SYSTEM ALERT: TACET FIELD DETECTED ::</div>
+                    <div class="ticker-item">:: DO NOT APPROACH WITHOUT RESONANCE CAPABILITY ::</div>
+                    <div class="ticker-item">:: NOVA COMMUNITY: RECRUITMENT OPEN ::</div>
+                    <div class="ticker-item">:: BLACK SHORES UPDATE LIVE ::</div>
+                </div>
+            </div>
+
+
+
+            <!-- Story Section (Redesigned "Broken Grid") -->
+            <section class="story-section">
+
+                <!-- 1. Float Title -->
+                <div class="story-title-block magnetic-btn" data-strength="20">
+                    <h2>UPDATE <span>3.0</span></h2>
+                    <div class="story-subtitle">// BLACK SHORES // REGION UNLOCKED</div>
+                </div>
+
+                <!-- 2. Tilted Visual -->
+                <div class="story-visual-block magnetic-btn" data-strength="40">
+                    <img src="assets/wuwa-visual.jpg" alt="Visual" class="visual-img">
+                    <!-- Removing sticker badge for cleaner look, or keeping it if user wants high density. Let's keep it but subtle. -->
+                    <img src="assets/wuwa-sticker.jpg" alt="Badge" class="sticker-badge"
+                        style="mix-blend-mode: screen; opacity: 0.8;">
+                </div>
+
+                <!-- 3. Glass Card Text -->
+                <div class="story-text-block magnetic-btn" data-strength="10">
+                    <h4>// DATA LOG: 7724 _ [CORRUPTED]</h4>
+                    <p>
+                        مصير العالم بين يديك. التحديث الجديد يفتح أبواب "الشواطئ السوداء". انغمس في قصة ملحمية، واكتشف
+                        الأسرار المدفونة تحت الأمواج. الجرافيكس المحسن والأداء الخارق ينتظرك.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- Discord Section (Black Hole Singularity) -->
+            <section class="discord-section" id="discord">
+                <div class="discord-content">
+                    <img src="assets/logo.jpg"
+                        style="width:120px; border-radius:50%; margin-bottom:2rem; box-shadow:0 0 50px var(--community-blurple); border: 2px solid rgba(255,255,255,0.1);"
+                        class="magnetic-btn">
+                    <h2 class="discord-title">JOIN THE ELITE</h2>
+                    <p class="discord-desc">المجتمع العربي الأول للعبة Wuthering Waves</p>
+                </div>
+
+                <div class="discord-btn-wrapper">
+                    <a href="https://discord.gg/rnw4DZ4gu6" target="_blank" class="join-btn magnetic-btn">
+                        <i class="fab fa-discord"></i> ENTER THE VOID
+                    </a>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <h3>NOVA <span>COMMUNITY</span></h3>
+                        <p>The premier Arab community for Wuthering Waves. Join the vanguard.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>LINKS</h4>
+                        <a href="#">Home</a>
+                        <a href="#discord">Discord</a>
+                        <a href="#">Guides</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>SOCIAL</h4>
+                        <div class="social-icons">
+                            <a href="https://discord.gg/rnw4DZ4gu6" class="magnetic-btn footer-social"><i
+                                    class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    NOVA &copy; 2026 // ARCHITECTED BY ANTIGRAVITY
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/visuals.js"></script>
+    <script src="js/main.js"></script>
+
+    <footer style='text-align:center; padding: 20px; background: rgba(0,0,0,0.8); color: rgba(255,255,255,0.5); font-size: 0.9rem; z-index: 1000; position: relative;'>Designed & Developed by <strong>Mr. Bob</strong> | جميع الحقوق محفوظة</footer>
+</body>
+
+</html>
